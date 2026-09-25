@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#1a0e0a" />
+<title>MAGNÉTICA — De perseguir a ser elegida · por Tovlov</title>
+<meta name="description" content="El método Tovlov para convertirte en la mujer que el hombre correcto elige, persigue y no suelta. 90 días, sin trucos, sin manipulación, sin perderte a ti misma." />
+<meta property="og:title" content="MAGNÉTICA — por Tovlov" />
+<meta property="og:description" content="De perseguir a ser elegida. En 90 días." />
+<meta property="og:type" content="website" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+  /* =====================================================
+     MAGNÉTICA — Landing por Tovlov
+     Paleta: borgoña profundo, crema, dorado rosado
+     Tipografía: Cormorant Garamond (display) + Inter (UI)
+     Mobile-first
+     ===================================================== */
+
+  :root {
+    --burgundy:        #3a1622;
+    --burgundy-deep:   #1f0b12;
+    --burgundy-soft:   #5a2436;
+    --cream:           #f6efe6;
+    --cream-warm:      #ede1d0;
+    --ivory:           #fbf7f1;
+    --gold:            #b48956;
+    --gold-soft:       #d4a877;
+    --gold-rose:       #c98f7a;
+    --ink:             #1c1410;
+    --ink-soft:        #4a3b34;
+    --line:            rgba(180, 137, 86, 0.25);
+    --shadow-sm:       0 2px 12px rgba(31, 11, 18, 0.08);
+    --shadow-md:       0 8px 32px rgba(31, 11, 18, 0.12);
+    --shadow-lg:       0 24px 60px rgba(31, 11, 18, 0.18);
+    --radius-sm:       6px;
+    --radius-md:       12px;
+    --radius-lg:       20px;
+    --ease:            cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--ivory);
+    color: var(--ink);
+    line-height: 1.6;
+    font-size: 16px;
+    overflow-x: hidden;
+    font-feature-settings: "ss01", "cv11";
+  }
+
+  .display { font-family: 'Cormorant Garamond', Georgia, serif; font-weight: 500; letter-spacing: -0.01em; }
+  .italic  { font-style: italic; }
+
+  /* ---------- LAYOUT ---------- */
+  .container { width: 100%; max-width: 680px; margin: 0 auto; padding: 0 22px; }
+  .container-wide { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 22px; }
+  section { padding: 64px 0; position: relative; }
+
+  @media (min-width: 900px) {
+    section { padding: 100px 0; }
+    .container { padding: 0 32px; }
+  }
+
+  /* ---------- TOP BAR ---------- */
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(58, 22, 34, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(180, 137, 86, 0.18);
+  }
+  .topbar-inner {
+    display: flex; align-items: center; justify-content: space-between;
+    max-width: 1100px; margin: 0 auto; padding: 0 22px;
+  }
+  .brand {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px; font-weight: 500;
+    color: var(--cream); letter-spacing: 0.12em; text-transform: uppercase;
+  }
+  .brand-sub { color: var(--gold-soft); font-size: 11px; letter-spacing: 0.2em; }
+  .top-cohort {
+    color: var(--cream); font-size: 12px; letter-spacing: 0.04em;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .pulse-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #6ec07a; box-shadow: 0 0 0 0 rgba(110, 192, 122, 0.6);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(110, 192, 122, 0.5); }
+    70%  { box-shadow: 0 0 0 8px rgba(110, 192, 122, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(110, 192, 122, 0); }
+  }
+  @media (max-width: 600px) {
+    .top-cohort .label-long { display: none; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    background: linear-gradient(180deg, var(--burgundy) 0%, var(--burgundy-deep) 100%);
+    color: var(--cream);
+    padding: 48px 0 56px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 20% 0%, rgba(180, 137, 86, 0.18) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 100%, rgba(201, 143, 122, 0.12) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero-inner { position: relative; z-index: 1; }
+
+  .eyebrow {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--gold-soft); font-weight: 500;
+    margin-bottom: 22px;
+  }
+  .eyebrow::before, .eyebrow::after {
+    content: ''; width: 24px; height: 1px; background: var(--gold-soft); opacity: 0.5;
+  }
+
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(38px, 9vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 18px;
+  }
+  .hero h1 .accent {
+    font-style: italic; color: var(--gold-soft); font-weight: 400;
+  }
+  .hero-sub {
+    font-size: clamp(16px, 4vw, 19px);
+    color: rgba(246, 239, 230, 0.78);
+    margin-bottom: 32px;
+    max-width: 580px;
+    line-height: 1.55;
+  }
+
+  /* VSL */
+  .vsl-wrap {
+    position: relative;
+    background: #000;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    box-shadow: var(--shadow-lg), 0 0 0 1px rgba(180, 137, 86, 0.3);
+    margin-bottom: 28px;
+    cursor: pointer;
+  }
+  .vsl-wrap::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(58, 22, 34, 0.2) 0%, rgba(31, 11, 18, 0.5) 100%);
+    pointer-events: none;
+    transition: opacity 0.4s var(--ease);
+  }
+  .vsl-wrap:hover::after { opacity: 0.7; }
+  .vsl-placeholder {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at center, #4a1f2e 0%, #1f0b12 70%);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    z-index: 1;
+  }
+  .vsl-play {
+    width: 78px; height: 78px;
+    border-radius: 50%;
+    background: var(--cream);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 12px 40px rgba(180, 137, 86, 0.4);
+    transition: transform 0.3s var(--ease);
+    z-index: 3;
+  }
+  .vsl-wrap:hover .vsl-play { transform: scale(1.08); }
+  .vsl-play::before {
+    content: ''; width: 0; height: 0;
+    border-left: 22px solid var(--burgundy);
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    margin-left: 6px;
+  }
+  .vsl-label {
+    color: var(--cream); font-size: 12px; letter-spacing: 0.2em;
+    text-transform: uppercase; margin-top: 18px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.6);
+    z-index: 3;
+  }
+  .vsl-tag {
+    position: absolute; top: 14px; left: 14px;
+    background: rgba(31, 11, 18, 0.65); backdrop-filter: blur(8px);
+    color: var(--cream); font-size: 10px; letter-spacing: 0.18em;
+    padding: 6px 12px; border-radius: 100px;
+    text-transform: uppercase; z-index: 3;
+    border: 1px solid rgba(212, 168, 119, 0.25);
+  }
+
+  /* CTAs */
+  .cta-row {
+    display: flex; flex-direction: column; gap: 12px;
+    margin-bottom: 20px;
+  }
+  @media (min-width: 600px) {
+    .cta-row { flex-direction: row; align-items: center; }
+  }
+
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600; font-size: 15px;
+    letter-spacing: 0.04em;
+    padding: 18px 32px;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s var(--ease);
+    text-decoration: none;
+    line-height: 1;
+    text-align: center;
+  }
+  .btn-primary {
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-soft) 100%);
+    color: var(--burgundy-deep);
+    box-shadow: 0 8px 24px rgba(180, 137, 86, 0.35);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 36px rgba(180, 137, 86, 0.5);
+  }
+  .btn-primary::after {
+    content: '→';
+    font-size: 18px; transition: transform 0.3s var(--ease);
+  }
+  .btn-primary:hover::after { transform: translateX(4px); }
+  .btn-ghost {
+    background: transparent;
+    color: var(--cream);
+    border: 1px solid rgba(246, 239, 230, 0.3);
+  }
+  .btn-ghost:hover { background: rgba(246, 239, 230, 0.08); }
+
+  .micro-trust {
+    display: flex; flex-wrap: wrap; gap: 18px;
+    font-size: 12px; color: rgba(246, 239, 230, 0.6);
+    letter-spacing: 0.04em;
+  }
+  .micro-trust span { display: flex; align-items: center; gap: 6px; }
+  .micro-trust span::before {
+    content: ''; width: 4px; height: 4px; border-radius: 50%;
+    background: var(--gold-soft);
+  }
+
+  /* ---------- PAIN BLOCK ---------- */
+  .pain {
+    background: var(--cream-warm);
+    color: var(--ink);
+  }
+  .pain h2, .h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(30px, 6.5vw, 48px);
+    line-height: 1.1;
+    letter-spacing: -0.015em;
+    margin-bottom: 32px;
+    color: var(--burgundy-deep);
+  }
+  .pain h2 .italic { color: var(--burgundy-soft); }
+
+  .pain-list { list-style: none; margin-top: 24px; }
+  .pain-list li {
+    display: flex; gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 17px; line-height: 1.5;
+    color: var(--ink-soft);
+  }
+  .pain-list li:last-child { border-bottom: none; }
+  .pain-list li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-top: 11px;
+  }
+
+  .pain-anchor {
+    margin-top: 36px;
+    padding: 28px;
+    background: var(--ivory);
+    border-left: 3px solid var(--gold);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(20px, 4.5vw, 26px);
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--burgundy-deep);
+  }
+
+  /* ---------- INSIGHT / MANIFIESTO ---------- */
+  .manifesto {
+    background: var(--ivory);
+    color: var(--ink);
+    text-align: center;
+  }
+  .manifesto h2 {
+    margin-bottom: 16px;
+  }
+  .manifesto-lead {
+    font-size: 17px; color: var(--ink-soft);
+    max-width: 540px; margin: 0 auto 40px;
+  }
+  .creo-list {
+    list-style: none;
+    max-width: 620px; margin: 0 auto;
+    text-align: left;
+  }
+  .creo-list li {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(19px, 4vw, 24px);
+    line-height: 1.45;
+    padding: 16px 0 16px 36px;
+    color: var(--burgundy-deep);
+    position: relative;
+    border-bottom: 1px solid var(--line);
+  }
+  .creo-list li:last-child { border-bottom: none; }
+  .creo-list li::before {
+    content: '◆';
+    position: absolute; left: 0; top: 22px;
+    color: var(--gold);
+    font-size: 12px;
+  }
+  .creo-list .firma {
+    text-align: center; padding-left: 0;
+    font-style: italic; color: var(--gold);
+    margin-top: 20px; font-size: 22px;
+  }
+  .creo-list .firma::before { display: none; }
+
+  /* ---------- INSIGHT CALLOUT ---------- */
+  .insight {
+    background: var(--burgundy-deep);
+    color: var(--cream);
+    text-align: center;
+    padding: 80px 0;
+  }
+  .insight-mark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 84px; line-height: 1; color: var(--gold);
+    opacity: 0.5; margin-bottom: -20px;
+  }
+  .insight-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(26px, 5.5vw, 40px);
+    line-height: 1.25;
+    max-width: 760px; margin: 0 auto 24px;
+    letter-spacing: -0.01em;
+  }
+  .insight-quote .accent { color: var(--gold-soft); font-style: italic; }
+  .insight-author {
+    font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase;
+    color: var(--gold-soft);
+  }
+
+  /* ---------- MAGNA METHOD ---------- */
+  .magna {
+    background: linear-gradient(180deg, var(--ivory) 0%, var(--cream) 100%);
+    color: var(--ink);
+  }
+  .magna-head { text-align: center; margin-bottom: 56px; }
+  .magna-head .h2 { margin-bottom: 14px; }
+  .magna-head p { color: var(--ink-soft); max-width: 600px; margin: 0 auto; font-size: 17px; }
+
+  .magna-grid {
+    display: grid; grid-template-columns: 1fr; gap: 18px;
+  }
+  @media (min-width: 760px) {
+    .magna-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 1000px) {
+    .magna-grid { grid-template-columns: repeat(4, 1fr); }
+  }
+
+  .phase {
+    background: var(--ivory);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    padding: 28px 24px;
+    position: relative;
+    transition: all 0.4s var(--ease);
+  }
+  .phase:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--gold);
+  }
+  .phase-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px; letter-spacing: 0.3em; color: var(--gold);
+    margin-bottom: 14px; text-transform: uppercase;
+  }
+  .phase-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px; font-weight: 500;
+    color: var(--burgundy-deep);
+    margin-bottom: 12px;
+    letter-spacing: -0.01em;
+  }
+  .phase-q {
+    font-style: italic;
+    color: var(--burgundy-soft);
+    font-size: 14px;
+    margin-bottom: 14px;
+    line-height: 1.4;
+  }
+  .phase-desc { font-size: 14px; color: var(--ink-soft); line-height: 1.5; }
+  .phase-mods {
+    margin-top: 14px;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--gold); font-weight: 600;
+  }
+
+  /* ---------- MALKA ---------- */
+  .malka {
+    background: var(--burgundy);
+    color: var(--cream);
+    overflow: hidden;
+    position: relative;
+  }
+  .malka::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(180,137,86,0.18) 0%, transparent 70%);
+    pointer-events: none;
+  }
+  .malka-inner {
+    display: grid; gap: 40px;
+    grid-template-columns: 1fr;
+    align-items: center;
+    position: relative; z-index: 1;
+  }
+  @media (min-width: 900px) {
+    .malka-inner { grid-template-columns: 0.85fr 1fr; gap: 64px; }
+  }
+  .malka-portrait {
+    aspect-ratio: 4/5;
+    background:
+      linear-gradient(135deg, rgba(58,22,34,0.6) 0%, rgba(31,11,18,0.4) 100%),
+      radial-gradient(circle at 30% 30%, var(--gold-soft) 0%, var(--burgundy-soft) 55%, var(--burgundy-deep) 100%);
+    border-radius: var(--radius-lg);
+    position: relative;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+    border: 1px solid rgba(212, 168, 119, 0.25);
+    display: flex; align-items: flex-end; justify-content: center;
+    padding: 32px;
+  }
+  .malka-portrait::after {
+    content: 'MALKA';
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px; letter-spacing: 0.4em;
+    color: var(--cream); opacity: 0.7;
+    position: absolute; bottom: 24px; left: 24px;
+  }
+  .malka-portrait::before {
+    content: '';
+    position: absolute; inset: 24px;
+    border: 1px solid rgba(246, 239, 230, 0.15);
+    border-radius: var(--radius-md);
+    pointer-events: none;
+  }
+  .malka-tag {
+    position: absolute; top: 24px; right: 24px;
+    font-size: 10px; letter-spacing: 0.3em;
+    color: var(--gold-soft);
+    text-transform: uppercase;
+  }
+  .malka-content .eyebrow { margin-bottom: 18px; }
+  .malka-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 6.5vw, 52px);
+    line-height: 1.05;
+    margin-bottom: 24px;
+    letter-spacing: -0.015em;
+  }
+  .malka-content h2 .italic { color: var(--gold-soft); font-weight: 400; }
+  .malka-content p {
+    font-size: 16px;
+    color: rgba(246, 239, 230, 0.82);
+    margin-bottom: 16px;
+    line-height: 1.65;
+  }
+  .malka-quote {
+    margin-top: 28px;
+    padding: 24px 28px;
+    border-left: 2px solid var(--gold);
+    background: rgba(0,0,0,0.18);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 19px;
+    color: var(--cream);
+    line-height: 1.45;
+  }
+  .malka-stats {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
+    margin-top: 32px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(180, 137, 86, 0.25);
+  }
+  .stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px; font-weight: 500;
+    color: var(--gold-soft);
+    line-height: 1;
+  }
+  .stat-label {
+    font-size: 11px; letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(246, 239, 230, 0.6);
+    margin-top: 6px;
+  }
+
+  /* ---------- MODULES ---------- */
+  .modules { background: var(--ivory); }
+  .modules-head { text-align: center; margin-bottom: 48px; }
+  .modules-grid {
+    display: grid; gap: 12px;
+    max-width: 760px; margin: 0 auto;
+  }
+  .mod {
+    background: var(--ivory);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    transition: all 0.3s var(--ease);
+  }
+  .mod[open] { border-color: var(--gold); box-shadow: var(--shadow-sm); }
+  .mod summary {
+    padding: 22px 24px;
+    cursor: pointer;
+    list-style: none;
+    display: flex; align-items: center; gap: 18px;
+    user-select: none;
+  }
+  .mod summary::-webkit-details-marker { display: none; }
+  .mod-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; color: var(--gold);
+    width: 40px; flex-shrink: 0;
+    font-weight: 500;
+  }
+  .mod-title {
+    flex: 1;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 21px;
+    color: var(--burgundy-deep);
+    line-height: 1.25;
+    font-weight: 500;
+  }
+  .mod-arrow {
+    font-size: 18px; color: var(--gold);
+    transition: transform 0.3s var(--ease);
+    flex-shrink: 0;
+  }
+  .mod[open] .mod-arrow { transform: rotate(45deg); }
+  .mod-body {
+    padding: 0 24px 24px 82px;
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  .mod-body .ancla {
+    margin-top: 16px;
+    padding: 14px 16px;
+    background: var(--cream-warm);
+    border-radius: var(--radius-sm);
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--burgundy-deep);
+    font-size: 15px;
+  }
+  .mod-body .ancla::before {
+    content: 'Frase ancla — ';
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-size: 10px; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--gold);
+    display: block; margin-bottom: 4px;
+  }
+  .fase-divider {
+    text-align: center;
+    margin: 32px 0 14px;
+    padding-top: 18px;
+    position: relative;
+  }
+  .fase-divider::before {
+    content: ''; position: absolute; top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: 60px; height: 1px; background: var(--gold); opacity: 0.5;
+  }
+  .fase-divider .label {
+    font-size: 10px; letter-spacing: 0.32em; color: var(--gold);
+    text-transform: uppercase; font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .fase-divider .name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px; color: var(--burgundy-deep);
+    font-style: italic;
+  }
+  .fase-divider .lema {
+    font-size: 13px; color: var(--ink-soft);
+    margin-top: 4px; max-width: 460px; margin-left: auto; margin-right: auto;
+  }
+  .fase-divider:first-child { margin-top: 0; }
+
+  /* ---------- TOVLOV ---------- */
+  .tovlov {
+    background: var(--cream-warm);
+    color: var(--ink);
+    text-align: center;
+  }
+  .tovlov h2 { margin-bottom: 22px; }
+  .tovlov-lead {
+    max-width: 620px; margin: 0 auto 40px;
+    font-size: 17px; color: var(--ink-soft);
+    line-height: 1.65;
+  }
+  .tovlov-pillars {
+    display: grid; grid-template-columns: 1fr; gap: 16px;
+    max-width: 880px; margin: 0 auto;
+    text-align: left;
+  }
+  @media (min-width: 760px) {
+    .tovlov-pillars { grid-template-columns: repeat(3, 1fr); }
+  }
+  .pillar {
+    background: var(--ivory);
+    padding: 28px;
+    border-radius: var(--radius-md);
+    border-top: 3px solid var(--gold);
+  }
+  .pillar-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px; color: var(--gold);
+    line-height: 1; margin-bottom: 14px;
+  }
+  .pillar h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; color: var(--burgundy-deep);
+    margin-bottom: 10px; font-weight: 500;
+  }
+  .pillar p { font-size: 14px; color: var(--ink-soft); line-height: 1.55; }
+
+  /* ---------- STACK / OFFER ---------- */
+  .offer {
+    background: var(--burgundy-deep);
+    color: var(--cream);
+  }
+  .offer-head { text-align: center; margin-bottom: 48px; }
+  .offer-head h2 { color: var(--cream); margin-bottom: 14px; }
+  .offer-head p { color: rgba(246, 239, 230, 0.7); max-width: 540px; margin: 0 auto; font-size: 16px; }
+
+  .stack {
+    max-width: 760px; margin: 0 auto;
+    background: rgba(0,0,0,0.18);
+    border-radius: var(--radius-lg);
+    border: 1px solid rgba(180, 137, 86, 0.2);
+    padding: 8px;
+  }
+  .stack-item {
+    display: grid; grid-template-columns: auto 1fr auto; gap: 16px;
+    padding: 18px 20px;
+    align-items: start;
+    border-bottom: 1px solid rgba(180, 137, 86, 0.12);
+  }
+  .stack-item:last-child { border-bottom: none; }
+  .stack-icon {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(180, 137, 86, 0.18);
+    color: var(--gold-soft);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    font-weight: 500;
+  }
+  .stack-text strong {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    color: var(--cream);
+    font-weight: 500;
+    margin-bottom: 4px;
+    line-height: 1.2;
+  }
+  .stack-text span {
+    font-size: 13px;
+    color: rgba(246, 239, 230, 0.65);
+    line-height: 1.5;
+  }
+  .stack-val {
+    color: var(--gold-soft);
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    align-self: center;
+  }
+
+  .stack-total {
+    margin-top: 36px;
+    text-align: center;
+    padding: 32px;
+    border-top: 1px solid rgba(180, 137, 86, 0.2);
+  }
+  .stack-total .crossed {
+    font-size: 16px;
+    color: rgba(246, 239, 230, 0.45);
+    text-decoration: line-through;
+    margin-bottom: 8px;
+  }
+  .price-now {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(50px, 12vw, 84px);
+    line-height: 1; color: var(--gold-soft);
+    font-weight: 500;
+    letter-spacing: -0.02em;
+  }
+  .price-currency {
+    font-size: 0.5em; vertical-align: top; margin-right: 4px;
+    color: var(--gold);
+  }
+  .price-note {
+    margin-top: 14px;
+    font-size: 14px;
+    color: rgba(246, 239, 230, 0.7);
+    font-style: italic;
+  }
+  .offer-cta {
+    margin-top: 36px;
+    text-align: center;
+  }
+  .offer-cta .btn-primary { font-size: 17px; padding: 22px 44px; }
+  .offer-cta .micro {
+    margin-top: 16px;
+    font-size: 12px;
+    color: rgba(246, 239, 230, 0.5);
+    letter-spacing: 0.04em;
+  }
+
+  /* ---------- GUARANTEES ---------- */
+  .guarantees {
+    background: var(--ivory);
+    text-align: center;
+  }
+  .guarantees h2 { margin-bottom: 14px; }
+  .guarantees-lead { color: var(--ink-soft); max-width: 540px; margin: 0 auto 48px; font-size: 16px; }
+  .seals {
+    display: grid; grid-template-columns: 1fr; gap: 20px;
+    max-width: 860px; margin: 0 auto;
+  }
+  @media (min-width: 760px) {
+    .seals { grid-template-columns: repeat(3, 1fr); }
+  }
+  .seal {
+    background: var(--cream-warm);
+    border-radius: var(--radius-md);
+    padding: 32px 24px;
+    text-align: center;
+    position: relative;
+    border: 1px solid var(--line);
+  }
+  .seal-badge {
+    width: 110px; height: 110px;
+    margin: 0 auto 18px;
+    border-radius: 50%;
+    background: var(--ivory);
+    border: 2px dashed var(--gold);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    color: var(--burgundy-deep);
+    position: relative;
+  }
+  .seal-badge::before, .seal-badge::after {
+    content: '';
+    position: absolute;
+    inset: 6px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    opacity: 0.4;
+  }
+  .seal-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px; font-weight: 500; line-height: 1;
+    color: var(--burgundy-deep);
+  }
+  .seal-unit {
+    font-size: 10px; letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-top: 4px;
+  }
+  .seal h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px; font-weight: 500;
+    color: var(--burgundy-deep);
+    margin-bottom: 10px;
+  }
+  .seal p {
+    font-size: 14px; color: var(--ink-soft);
+    line-height: 1.55;
+  }
+
+  /* ---------- FOR WHO ---------- */
+  .forwho {
+    background: var(--ivory);
+  }
+  .forwho-grid {
+    display: grid; grid-template-columns: 1fr; gap: 20px;
+    max-width: 880px; margin: 0 auto;
+  }
+  @media (min-width: 760px) {
+    .forwho-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  .forwho-card {
+    padding: 32px 28px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--line);
+  }
+  .forwho-card.yes { background: var(--cream-warm); }
+  .forwho-card.no { background: var(--ivory); }
+  .forwho-card h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    margin-bottom: 18px;
+    font-weight: 500;
+    display: flex; align-items: center; gap: 12px;
+    color: var(--burgundy-deep);
+  }
+  .forwho-card .mark {
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 700;
+  }
+  .forwho-card.yes .mark { background: var(--gold); color: var(--burgundy-deep); }
+  .forwho-card.no .mark { background: var(--burgundy); color: var(--cream); }
+  .forwho-card ul { list-style: none; }
+  .forwho-card li {
+    padding: 10px 0; padding-left: 24px;
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.5;
+    position: relative;
+  }
+  .forwho-card li::before {
+    position: absolute; left: 0; top: 11px;
+    font-size: 16px; line-height: 1;
+  }
+  .forwho-card.yes li::before { content: '✓'; color: var(--gold); font-weight: 600; }
+  .forwho-card.no li::before { content: '×'; color: var(--burgundy); font-weight: 700; }
+
+  /* ---------- FAQ ---------- */
+  .faq { background: var(--cream-warm); }
+  .faq-head { text-align: center; margin-bottom: 40px; }
+  .faq-list { max-width: 760px; margin: 0 auto; }
+  .faq-item {
+    border-bottom: 1px solid var(--line);
+    padding: 4px 0;
+  }
+  .faq-item summary {
+    padding: 22px 16px 22px 0;
+    cursor: pointer;
+    list-style: none;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--burgundy-deep);
+    font-weight: 500;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 16px;
+    line-height: 1.3;
+  }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after {
+    content: '+';
+    color: var(--gold);
+    font-size: 22px;
+    font-weight: 300;
+    transition: transform 0.3s var(--ease);
+    flex-shrink: 0;
+  }
+  .faq-item[open] summary::after { transform: rotate(45deg); }
+  .faq-item .a {
+    padding: 0 16px 22px 0;
+    color: var(--ink-soft);
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  /* ---------- FINAL CTA ---------- */
+  .final-cta {
+    background: linear-gradient(180deg, var(--burgundy) 0%, var(--burgundy-deep) 100%);
+    color: var(--cream);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .final-cta::before {
+    content: '';
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(180, 137, 86, 0.2) 0%, transparent 60%);
+    pointer-events: none;
+  }
+  .final-cta-inner { position: relative; z-index: 1; }
+  .final-cta h2 {
+    color: var(--cream);
+    font-size: clamp(34px, 7.5vw, 64px);
+    line-height: 1.05;
+    margin-bottom: 20px;
+  }
+  .final-cta h2 .accent { color: var(--gold-soft); font-style: italic; }
+  .final-cta p {
+    max-width: 560px; margin: 0 auto 32px;
+    color: rgba(246, 239, 230, 0.78);
+    font-size: 17px;
+  }
+
+  .cohort-meter {
+    max-width: 460px; margin: 0 auto 28px;
+    background: rgba(0,0,0,0.25);
+    border-radius: 100px;
+    padding: 14px 22px;
+    display: flex; align-items: center; gap: 14px;
+    border: 1px solid rgba(180, 137, 86, 0.2);
+  }
+  .meter-bar {
+    flex: 1;
+    height: 6px;
+    background: rgba(246, 239, 230, 0.12);
+    border-radius: 100px;
+    overflow: hidden;
+  }
+  .meter-fill {
+    height: 100%;
+    width: 73%;
+    background: linear-gradient(90deg, var(--gold) 0%, var(--gold-soft) 100%);
+    border-radius: 100px;
+  }
+  .meter-label {
+    font-size: 12px; letter-spacing: 0.04em;
+    color: var(--cream);
+    white-space: nowrap;
+  }
+
+  .ps {
+    margin-top: 56px;
+    max-width: 580px; margin-left: auto; margin-right: auto;
+    padding: 28px;
+    background: rgba(0,0,0,0.2);
+    border-radius: var(--radius-md);
+    border-left: 2px solid var(--gold);
+    text-align: left;
+  }
+  .ps strong {
+    color: var(--gold-soft);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px; font-weight: 500;
+    display: block; margin-bottom: 8px;
+    letter-spacing: 0.04em;
+  }
+  .ps p {
+    font-size: 15px;
+    color: rgba(246, 239, 230, 0.78);
+    line-height: 1.65;
+    margin: 0;
+    max-width: none;
+  }
+  .ps .signature {
+    margin-top: 14px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    color: var(--gold-soft);
+    font-size: 17px;
+  }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    background: var(--burgundy-deep);
+    color: rgba(246, 239, 230, 0.5);
+    padding: 40px 0 32px;
+    text-align: center;
+    border-top: 1px solid rgba(180, 137, 86, 0.15);
+  }
+  footer .brand-foot {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    letter-spacing: 0.18em;
+    color: var(--cream);
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+  footer .brand-foot .sep { color: var(--gold); margin: 0 8px; }
+  footer p { font-size: 12px; letter-spacing: 0.06em; }
+  footer a { color: var(--gold-soft); text-decoration: none; }
+
+  /* ---------- STICKY MOBILE CTA ---------- */
+  .sticky-cta {
+    position: fixed; bottom: 0; left: 0; right: 0;
+    z-index: 40;
+    background: var(--burgundy-deep);
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+    box-shadow: 0 -8px 32px rgba(0,0,0,0.3);
+    transform: translateY(100%);
+    transition: transform 0.4s var(--ease);
+    border-top: 1px solid rgba(180, 137, 86, 0.25);
+  }
+  .sticky-cta.show { transform: translateY(0); }
+  .sticky-cta-inner {
+    display: flex; align-items: center; gap: 12px;
+    max-width: 720px; margin: 0 auto;
+  }
+  .sticky-price {
+    flex: 1;
+    color: var(--cream);
+    font-size: 13px;
+    line-height: 1.2;
+  }
+  .sticky-price strong {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    color: var(--gold-soft);
+    font-weight: 500;
+  }
+  .sticky-cta .btn {
+    padding: 14px 22px;
+    font-size: 14px;
+  }
+  @media (min-width: 900px) {
+    .sticky-cta { display: none; }
+  }
+
+  /* ---------- SCROLL REVEAL ---------- */
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+
+  /* Reduce motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+    .reveal { opacity: 1; transform: none; }
+  }
+
+  /* Selection color */
+  ::selection { background: var(--gold); color: var(--burgundy-deep); }
+</style>
+</head>
+<body>
+
+<!-- ============== TOP BAR ============== -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <div>
+      <div class="brand">Magnética</div>
+      <div class="brand-sub">por Tovlov</div>
+    </div>
+    <div class="top-cohort">
+      <span class="pulse-dot"></span>
+      <span><span class="label-long">Cohort Junio 2026 — </span>73/100 lugares</span>
+    </div>
+  </div>
+</div>
+
+<!-- ============== HERO ============== -->
+<header class="hero">
+  <div class="container hero-inner">
+    <div class="eyebrow">El Método Tovlov</div>
+
+    <h1>
+      De perseguir<br>
+      a ser <span class="accent">elegida</span>.
+    </h1>
+
+    <p class="hero-sub">
+      El método Tovlov para convertirte en la mujer que el hombre correcto elige, persigue y no suelta. En 90 días. Sin trucos, sin manipulación, sin perderte a ti misma.
+    </p>
+
+    <!-- VSL -->
+    <div class="vsl-wrap" id="vsl" role="button" aria-label="Reproducir video">
+      <div class="vsl-placeholder">
+        <div class="vsl-tag">Video · 4 min</div>
+        <div class="vsl-play" aria-hidden="true"></div>
+        <div class="vsl-label">Mira esto antes de seguir</div>
+      </div>
+      <!-- Reemplazar este bloque con el VSL real cuando esté listo:
+      <video controls poster="poster.jpg" style="width:100%;height:100%;object-fit:cover">
+        <source src="vsl.mp4" type="video/mp4">
+      </video>
+      -->
+    </div>
+
+    <div class="cta-row">
+      <a href="#oferta" class="btn btn-primary">Quiero entrar a la próxima cohort</a>
+      <a href="#metodo" class="btn btn-ghost">Conocer el método</a>
+    </div>
+
+    <div class="micro-trust">
+      <span>Cohort cerrada de 100 mujeres</span>
+      <span>Acceso de por vida</span>
+      <span>Garantía 30 días</span>
+    </div>
+  </div>
+</header>
+
+<!-- ============== PAIN BLOCK ============== -->
+<section class="pain">
+  <div class="container reveal">
+    <h2>Si llegaste hasta aquí, probablemente <span class="italic">ya sabes</span> de qué estoy hablando.</h2>
+
+    <ul class="pain-list">
+      <li>Llevas 2+ años en apps de citas sin un solo resultado que valga la pena.</li>
+      <li>Acabas de salir de una relación que nunca llegó al lugar donde tú esperabas.</li>
+      <li>Sientes que siempre eliges al mismo tipo de hombre — y se repite el final.</li>
+      <li>Estás cansada de que te digan "ya llegará" cuando llevas años esperando.</li>
+      <li>Tienes todo en orden — trabajo, gym, terapia — y aún así, esto no avanza.</li>
+    </ul>
+
+    <div class="pain-anchor">
+      "¿Qué tengo de malo? Tengo todo en orden. ¿Por qué los hombres que me gustan terminan eligiendo a otra? Empiezo a pensar que el problema soy yo."
+    </div>
+  </div>
+</section>
+
+<!-- ============== INSIGHT CALLOUT ============== -->
+<section class="insight">
+  <div class="container reveal">
+    <div class="insight-mark">"</div>
+    <p class="insight-quote">
+      El problema nunca fue tu peso, tu edad ni tu trabajo.<br>
+      Fue <span class="accent">cómo aprendiste a amar</span>.
+    </p>
+    <div class="insight-author">— Manifiesto Tovlov</div>
+  </div>
+</section>
+
+<!-- ============== MANIFIESTO ============== -->
+<section class="manifesto">
+  <div class="container reveal">
+    <h2>Lo que creemos.</h2>
+    <p class="manifesto-lead">No es un curso. Es una forma distinta de relacionarte con los hombres. Una que casi nadie te enseñó.</p>
+
+    <ul class="creo-list">
+      <li>Creemos que ninguna mujer debería rogar para ser amada.</li>
+      <li>Creemos que la mujer que sabe lo que vale no persigue — es perseguida.</li>
+      <li>Creemos que los hombres correctos no se conquistan con tácticas. Se atraen con frecuencia.</li>
+      <li>Creemos que la mujer magnética no nace, se recuerda.</li>
+      <li>Creemos que hay una forma de relacionarte que es honesta, poderosa y profundamente femenina — y casi nadie te la enseñó.</li>
+      <li>Creemos en el amor con intención. En la pareja con sentido. En el "sí" que se elige todos los días.</li>
+      <li class="firma">— Bienvenida.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============== MAGNA METHOD ============== -->
+<section class="magna" id="metodo">
+  <div class="container-wide">
+    <div class="magna-head reveal">
+      <div class="eyebrow">El Mecanismo Único</div>
+      <h2 class="h2">El Método <span class="italic">MAGNA</span>™</h2>
+      <p>El 90% del mercado te enseña qué decir. Nosotros enseñamos algo radicalmente distinto: cómo emitir la frecuencia que el hombre correcto siente antes de que digas una sola palabra.</p>
+    </div>
+
+    <div class="magna-grid">
+      <div class="phase reveal">
+        <div class="phase-num">— Fase I</div>
+        <div class="phase-name">Reset</div>
+        <div class="phase-q">"¿Qué tengo que soltar de la mujer que fui?"</div>
+        <div class="phase-desc">Antes de atraer a alguien nuevo, hay alguien viejo a quien soltar. Diagnóstico, patrones heredados, cierre interno.</div>
+        <div class="phase-mods">Módulos 1 — 3</div>
+      </div>
+
+      <div class="phase reveal">
+        <div class="phase-num">— Fase II</div>
+        <div class="phase-name">Reconstrucción</div>
+        <div class="phase-q">"¿Quién es la mujer que estoy convirtiéndome?"</div>
+        <div class="phase-desc">Polaridad, identidad magnética y cuerpo. Defines auto-imagen, estándar y presencia desde adentro.</div>
+        <div class="phase-mods">Módulos 4 — 6</div>
+      </div>
+
+      <div class="phase reveal">
+        <div class="phase-num">— Fase III</div>
+        <div class="phase-name">Magnetismo</div>
+        <div class="phase-q">"¿Cómo emito la frecuencia que él siente?"</div>
+        <div class="phase-desc">Frecuencia femenina, voz, conversación. Aprendes a sostener un estado interior que él percibe sin que digas nada.</div>
+        <div class="phase-mods">Módulos 7 — 9</div>
+      </div>
+
+      <div class="phase reveal">
+        <div class="phase-num">— Fase IV</div>
+        <div class="phase-name">Selección</div>
+        <div class="phase-q">"¿Cómo elijo al correcto?"</div>
+        <div class="phase-desc">Filtros, estándares, ritmo de inversión y compromiso. Pasas de ser elegida a también elegir tú.</div>
+        <div class="phase-mods">Módulos 10 — 12</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== MALKA ============== -->
+<section class="malka" id="malka">
+  <div class="container-wide">
+    <div class="malka-inner">
+      <div class="malka-portrait reveal">
+        <div class="malka-tag">Creadora del Método</div>
+      </div>
+
+      <div class="malka-content reveal">
+        <div class="eyebrow">Quién está del otro lado</div>
+        <h2>Soy <span class="italic">Malka</span>.</h2>
+
+        <p>
+          Junto al equipo de Tovlov — y de la mano de las mejores terapeutas de Querétaro — construí algo que no existía en español: una metodología pensada para mujeres inteligentes, exitosas, con todo en orden... que llevan años atrayendo lo que no quieren.
+        </p>
+
+        <p>
+          No es otro curso de "ámate a ti misma y ya llegará". Eso ya lo haces, y tú ya sabes que no alcanza. Tampoco son trucos para que él te ruegue — eso funciona con los hombres equivocados; con el correcto, los aleja.
+        </p>
+
+        <p>
+          Magnética es el trabajo que nadie te enseñó: el de soltar a la mujer que fuiste, encarnar a la que estás convirtiéndote y aprender a operar desde una frecuencia distinta.
+        </p>
+
+        <div class="malka-quote">
+          "Las mujeres que tienen a los hombres correctos detrás no son las más bonitas del grupo. No son las que mandaron el mensaje perfecto. Son mujeres que operan diferente por dentro. Y eso no se hereda. Se aprende."
+        </div>
+
+        <div class="malka-stats">
+          <div>
+            <div class="stat-num">+8 años</div>
+            <div class="stat-label">Acompañando a mujeres</div>
+          </div>
+          <div>
+            <div class="stat-num">Tovlov</div>
+            <div class="stat-label">Matchmaking de México</div>
+          </div>
+          <div>
+            <div class="stat-num">12 sem.</div>
+            <div class="stat-label">El proceso completo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== MODULES ============== -->
+<section class="modules">
+  <div class="container">
+    <div class="modules-head reveal">
+      <div class="eyebrow">Lo que aprenderás</div>
+      <h2 class="h2">12 módulos. <span class="italic">90 días.</span></h2>
+      <p style="color: var(--ink-soft); max-width: 540px; margin: 14px auto 0;">Drip semanal. A tu ritmo, desde tu casa, en las noches o los fines. Acceso de por vida.</p>
+    </div>
+
+    <div class="modules-grid">
+
+      <!-- FASE I -->
+      <div class="fase-divider">
+        <div class="label">Fase I</div>
+        <div class="name">Reset</div>
+        <div class="lema">"Antes de atraer a alguien nuevo, hay alguien viejo a quien soltar."</div>
+      </div>
+
+      <details class="mod">
+        <summary>
+          <div class="mod-num">01</div>
+          <div class="mod-title">Diagnóstico Magnético</div>
+          <div class="mod-arrow">+</div>
+        </summary>
+        <div class="mod-body">
+          Vas a saber exactamente en qué cuadrante magnético estás operando hoy — Perseguidora, Espera, Indiferente o Magnética — y por qué los hombres reaccionan a ti como reaccionan. Por primera vez vas a ver TU patrón claro, sin culpa.
+          <div class="ancla">"No es un hombre nuevo lo que necesito. Es una versión nueva de mí."</div>
+        </div>
+      </details>
+
+      <details class="mod">
+        <summary>
+          <div class="mod-num">02</div>
+          <div class="mod-title">La Mujer que Te Llevó Hasta Aquí</div>
+          <div class="mod-arrow">+</div>
+        </summary>
+        <div class="mod-body">
+          Vas a identificar a la "versión interna" que ha estado eligiendo a tus parejas, cómo se formó y por qué buscamos lo familiar (aunque nos lastime) y no lo correcto. Empiezas a soltarla.
+          <div class="ancla">"Te agradezco. Y ya no necesito que decidas por mí."</div>
+        </div>
+      </details>
+
+      <details class="mod">
+        <summary>
+          <div class="mod-num">03</div>
+          <div class="mod-title">Soltar al Fantasma</div>
+          <div class="mod-arrow">+</div>
+        </summary>
+        <div class="mod-body">
+          Vas a procesar y cerrar emocionalmente al último hombre que sigue ocupando espacio mental — incluso si crees que ya lo superaste. El protocolo Tovlov de cierre interno sin contacto.
+          <div class="ancla">"Lo que ya no es mío, no necesita seguir viviendo dentro de mí."</div>
+        </div>
+      </details>
+
+      <!-- FASE II -->
+      <div class="fase-divider">
+        <div class="label">Fase II</div>
+        <div class="name">Reconstrucción</div>
+        <div class="lema">"No naciste rota. Te enseñaron a serlo."</div>
+      </div>
+
+      <details class="mod">
+        <summary>
+          <div class="mod-num">04</div>
+          <div class="mod-title">La Polaridad del Magnetismo</div>
+          <div class="mod-arrow">+</div>
+        </summary>
+        <div class="mod-body">
+          Qué es la polaridad emocional sin caricaturas ni machismo. Por qué las mujeres exitosas matan la atracción sin darse cuenta — y cómo evitarlo sin renunciar a tu ambición. Cómo recibir sin sentirte menos.
+          <div class="ancla">"Ser receptiva no me hace débil. Me hace magnética."</div>
+        </div>
+      </details>
+
+      <details class="mod">
+        <summary>
+          <div class="mod-num">05</div>
+          <div class="mod-title">La Identidad Magnética</div>
+          <div class="mod-arrow">+</div>
+        </summary>
+        <div class="mod-body">
+          Vas a definir conscientemente quién es la mujer en la que te estás convirtiendo. Los 5 atributos no negociables y tu "estándar interno" — claros, escritos, no negociables.
+          <div class="ancla">"No estoy disponible para menos de lo que valgo."</div>
+        </div>
+      </details>
+
+      <details class="mod">
+        <summary>
+          <div class="mod-num">06</div>
+          <div class="mod-title">El Cuerpo Magnético</div>
+          <div class="mod-arrow">+</div>
+        </summary>
+        <div class="mod-body">
+          La presencia vale más que la belleza. Los 4 elementos de la presencia magnética: postura, ritmo, contacto visual y respiración. Por qué caminar lento es más sexy. La mirada Tovlov.
+          <div class="ancla">"Mi cuerpo es mi primer mensaje. Voy a habitarlo."</div>
+        </div>
+      </details>
+
+      <!-- FASE III -->
+      <div class="fase-divider">
+        <div class="label">Fase III</div>
+        <div class="name">Magnetismo</div>
+        <div class="lema">"Lo que él siente no se finge. Se cultiva."</div>
+      </div>
+
+      <details class="mod">
+        <summary>
+          <div class="mod-num">07</div>
+          <div class="mod-title">La Frecuencia Femenina</div>
+          <div class="mod-arrow">+</div>
+        </summary>
+        <div class="mod-body">
+          Los 5 estados que disuelven la atracción (ansiedad, control, necesidad, prisa, queja) vs los 5 que magnetizan (presencia, juego, calma, curiosidad, gozo). La práctica del estado base alto.
+          <div class="ancla">"Mi estado interior es lo que él va a sentir. Voy a cuidarlo."</div>
+        </div>
+      </details>
+
+      <details class="mod">
+        <summary>
+          <div class="mod-num">08</div>
+          <div class="mod-title">La Voz que Encanta</div>
+          <div class="mod-arrow">+</div>
+        </summary>
+        <div class="mod-body">
+          La pausa magnética: 3 segundos que cambian una conversación. Cómo bajar el tono sin sonar fingida. Las preguntas que mantienen a un hombre interesado vs las que lo cansan.
+          <div class="ancla">"No tengo que llenar el silencio. El silencio es parte del baile."</div>
+        </div>
+      </details>
+
+      <details class="mod">
+        <summary>
+          <div class="mod-num">09</div>
+          <div class="mod-title">La Conversación que Cambia Todo</div>
+          <div class="mod-arrow">+</div>
+        </summary>
+        <div class="mod-body">
+          Las primeras 3 conversaciones deciden TODO. El arte del coqueteo consciente sin caer en la performance. WhatsApp y mensajes: cuántos, cuándo, qué decir — con reglas reales.
+          <div class="ancla">"No estoy aquí para gustarle. Estoy aquí para conocernos."</div>
+        </div>
+      </details>
+
+      <!-- FASE IV -->
+      <div class="fase-divider">
+        <div class="label">Fase IV</div>
+        <div class="name">Selección</div>
+        <div class="lema">"Atraer es fácil. Elegir bien es el arte."</div>
+      </div>
+
+      <details class="mod">
+        <summary>
+          <div class="mod-num">10</div>
+          <div class="mod-title">El Filtro</div>
+          <div class="mod-arrow">+</div>
+        </summary>
+        <div class="mod-body">
+          12 red flags tempranas que el 80% de las mujeres ignora. 8 green flags que casi nadie nombra. Las 5 preguntas Tovlov que en cita 2-3 te revelan más que 6 meses.
+          <div class="ancla">"Mis sentimientos son válidos. Pero no son evidencia. Voy a mirar con claridad."</div>
+        </div>
+      </details>
+
+      <details class="mod">
+        <summary>
+          <div class="mod-num">11</div>
+          <div class="mod-title">El Arte de Hacerte Esperar (Sin Juegos)</div>
+          <div class="mod-arrow">+</div>
+        </summary>
+        <div class="mod-body">
+          La diferencia entre "hacerse la difícil" (manipulación que aleja) y "tener un estándar" (poder real que atrae). El ritmo de inversión Tovlov. Las 4 cosas que NO se aceleran.
+          <div class="ancla">"Mi paciencia no es disponibilidad. Es discernimiento."</div>
+        </div>
+      </details>
+
+      <details class="mod">
+        <summary>
+          <div class="mod-num">12</div>
+          <div class="mod-title">El Camino al Compromiso</div>
+          <div class="mod-arrow">+</div>
+        </summary>
+        <div class="mod-body">
+          Los 7 indicadores conductuales de un hombre que va a quedarse. Los 5 que van a hacerte ghosting en 60 días. Cómo seguir siendo magnética dentro de la relación.
+          <div class="ancla">"No estoy esperando que me elija. Yo también estoy eligiendo."</div>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============== TOVLOV ============== -->
+<section class="tovlov">
+  <div class="container-wide">
+    <div class="reveal">
+      <div class="eyebrow" style="color: var(--gold); justify-content: center; display: flex;">Quién respalda esto</div>
+      <h2 class="h2" style="text-align: center;">Esto es <span class="italic">Tovlov</span>.</h2>
+      <p class="tovlov-lead">La agencia de matchmaking más exigente de México. Llevamos años acompañando a hombres y mujeres a encontrarse de verdad — no a "ligar". Magnética es el trabajo que toda alumna hace antes de estar lista para una relación que sí avanza.</p>
+    </div>
+
+    <div class="tovlov-pillars">
+      <div class="pillar reveal">
+        <div class="pillar-num">I</div>
+        <h3>Calidad sobre cantidad. Siempre.</h3>
+        <p>No somos una app. Cada presentación pasa por entrevista, perfilamiento y compatibilidad real. Esa misma exigencia es la que ponemos en Magnética.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="pillar-num">II</div>
+        <h3>Método propietario.</h3>
+        <p>El Método MAGNA™ es propiedad intelectual de Tovlov. No lo vas a encontrar en otro lado, en ningún idioma. Lo construimos junto a terapeutas durante años.</p>
+      </div>
+      <div class="pillar reveal">
+        <div class="pillar-num">III</div>
+        <h3>El puente al matchmaking.</h3>
+        <p>Magnética te prepara. Si después quieres dar el siguiente paso, tienes una llamada privada con un matchmaker Tovlov incluida en el curso.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== OFFER STACK ============== -->
+<section class="offer" id="oferta">
+  <div class="container-wide">
+    <div class="offer-head reveal">
+      <div class="eyebrow">La Oferta Completa</div>
+      <h2 class="h2">Todo lo que <span class="italic">recibes hoy</span>.</h2>
+      <p>Cuando te inscribes a Magnética, no entras a un curso. Entras a un proceso completo de 90 días con todo lo que necesitas para sostenerlo.</p>
+    </div>
+
+    <div class="stack reveal">
+      <div class="stack-item">
+        <div class="stack-icon">★</div>
+        <div class="stack-text">
+          <strong>El Curso Principal — Método MAGNA™</strong>
+          <span>12 video clases · 12 PDFs de trabajo · 12 audios de reprogramación · 4 fases · acceso de por vida</span>
+        </div>
+        <div class="stack-val">$9,997 valor</div>
+      </div>
+
+      <div class="stack-item">
+        <div class="stack-icon">1</div>
+        <div class="stack-text">
+          <strong>Live Coaching Tovlov</strong>
+          <span>4 sesiones grupales en vivo (1 cada 3 semanas) con coach Tovlov. Resolvemos tus dudas en tiempo real.</span>
+        </div>
+        <div class="stack-val">$4,997 valor</div>
+      </div>
+
+      <div class="stack-item">
+        <div class="stack-icon">2</div>
+        <div class="stack-text">
+          <strong>Guía Tovlov de Red Flags Tempranas</strong>
+          <span>47 banderas rojas con cómo identificarlas en las primeras 3 citas. PDF + audios.</span>
+        </div>
+        <div class="stack-val">$1,497 valor</div>
+      </div>
+
+      <div class="stack-item">
+        <div class="stack-icon">3</div>
+        <div class="stack-text">
+          <strong>Las 50 Frases Magnéticas</strong>
+          <span>Plantillas reales para WhatsApp, conversaciones y momentos clave. Sin sonar a robot.</span>
+        </div>
+        <div class="stack-val">$1,497 valor</div>
+      </div>
+
+      <div class="stack-item">
+        <div class="stack-icon">4</div>
+        <div class="stack-text">
+          <strong>El Vault de Casos Tovlov</strong>
+          <span>10 casos reales (anónimos) de mujeres que pasaron por Tovlov: qué pasó, qué cambió, qué decidieron.</span>
+        </div>
+        <div class="stack-val">$1,997 valor</div>
+      </div>
+
+      <div class="stack-item">
+        <div class="stack-icon">5</div>
+        <div class="stack-text">
+          <strong>Comunidad Privada de Alumnas</strong>
+          <span>Grupo exclusivo en Telegram con coaches Tovlov moderando. No estás sola en esto.</span>
+        </div>
+        <div class="stack-val">$2,997 valor</div>
+      </div>
+
+      <div class="stack-item">
+        <div class="stack-icon">6</div>
+        <div class="stack-text">
+          <strong>Llamada de Aplicación Tovlov</strong>
+          <span>1 sesión privada de 45 minutos con un matchmaker Tovlov. Tu puente al proceso premium si lo quieres.</span>
+        </div>
+        <div class="stack-val">$3,997 valor</div>
+      </div>
+
+      <div class="stack-item">
+        <div class="stack-icon">7</div>
+        <div class="stack-text">
+          <strong>Bono Sorpresa: Audiolibro "Mujer Magnética"</strong>
+          <span>Solo si te inscribes hoy. 4 horas leídas por Malka. Para escuchar en el coche, el gym, donde sea.</span>
+        </div>
+        <div class="stack-val">$997 valor</div>
+      </div>
+
+      <div class="stack-total">
+        <div class="crossed">Valor total real: $27,976 MXN</div>
+        <div style="color: var(--gold-soft); font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; margin-bottom: 14px;">— Inversión hoy —</div>
+        <div class="price-now"><span class="price-currency">$</span>1,997 <span style="font-size: 0.3em; color: var(--cream); letter-spacing: 0.1em;">MXN</span></div>
+        <div class="price-note">o 3 pagos de $797 MXN · pago único o mensual</div>
+
+        <div class="offer-cta">
+          <a href="#checkout" class="btn btn-primary">Quiero entrar a la próxima cohort</a>
+          <div class="micro">Cohort de 100 mujeres · 73 lugares ocupados · cierre en días</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== GUARANTEES ============== -->
+<section class="guarantees">
+  <div class="container-wide">
+    <div class="reveal" style="text-align: center;">
+      <div class="eyebrow" style="justify-content: center; display: flex;">Riesgo Cero</div>
+      <h2 class="h2">Tres garantías. <span class="italic">Stackeadas.</span></h2>
+      <p class="guarantees-lead">No tienes que confiar en nosotros. Solo dale una oportunidad al método. Si no funciona, te devolvemos cada peso.</p>
+    </div>
+
+    <div class="seals">
+      <div class="seal reveal">
+        <div class="seal-badge">
+          <div class="seal-num">14</div>
+          <div class="seal-unit">días</div>
+        </div>
+        <h3>Sin preguntas</h3>
+        <p>Si en los primeros 14 días sientes que esto no es para ti, escríbenos un email y te devolvemos el 100%. Sin cuestionarios. Sin "¿estás segura?". Se acabó.</p>
+      </div>
+
+      <div class="seal reveal">
+        <div class="seal-badge">
+          <div class="seal-num">60</div>
+          <div class="seal-unit">días</div>
+        </div>
+        <h3>De Transformación</h3>
+        <p>Si al día 60 has completado los primeros 6 módulos y sientes que NADA cambió en tu forma de relacionarte, te devolvemos el 100% Y te quedas con todo el material.</p>
+      </div>
+
+      <div class="seal reveal">
+        <div class="seal-badge">
+          <div class="seal-num">12</div>
+          <div class="seal-unit">meses</div>
+        </div>
+        <h3>Garantía Tovlov</h3>
+        <p>Si al terminar quieres saltar al matchmaking Tovlov y no eres aceptada, te regresamos el 100% del curso. Respondemos por ti con nuestro propio servicio.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOR WHO ============== -->
+<section class="forwho">
+  <div class="container-wide">
+    <div class="reveal" style="text-align: center; margin-bottom: 48px;">
+      <div class="eyebrow" style="justify-content: center; display: flex;">Honestidad ante todo</div>
+      <h2 class="h2">¿Es Magnética <span class="italic">para ti</span>?</h2>
+    </div>
+
+    <div class="forwho-grid">
+      <div class="forwho-card yes reveal">
+        <h3><span class="mark">✓</span> Magnética es para ti si...</h3>
+        <ul>
+          <li>Tienes entre 28 y 50 años</li>
+          <li>Estás abierta a mirarte honestamente, sin filtros</li>
+          <li>Quieres una relación con propósito, no entretenimiento</li>
+          <li>Estás dispuesta a invertir 1-2 horas a la semana durante 12 semanas</li>
+          <li>Quieres un proceso real, no una pastilla mágica</li>
+        </ul>
+      </div>
+
+      <div class="forwho-card no reveal">
+        <h3><span class="mark">×</span> Magnética NO es para ti si...</h3>
+        <ul>
+          <li>Buscas trucos rápidos para "tener al hombre comiendo de tu mano"</li>
+          <li>No estás dispuesta a soltar patrones que ya no te sirven</li>
+          <li>Quieres resultados sin hacer el trabajo</li>
+          <li>Crees que el problema es "qué hombre conoces" y no "desde dónde lo conoces"</li>
+          <li>Buscas terapia profunda (esto la complementa, no la reemplaza)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FAQ ============== -->
+<section class="faq">
+  <div class="container">
+    <div class="faq-head reveal">
+      <div class="eyebrow">Preguntas frecuentes</div>
+      <h2 class="h2">Lo que <span class="italic">también</span> me preguntan.</h2>
+    </div>
+
+    <div class="faq-list">
+      <details class="faq-item reveal">
+        <summary>¿Esto realmente funciona si llevo años con el mismo patrón?</summary>
+        <div class="a">Sí — porque Magnética no trabaja el síntoma (cuál hombre eliges) sino la causa (por qué eliges desde donde eliges). Las primeras 3 fases (Reset, Reconstrucción, Magnetismo) abordan precisamente eso. La transformación no es cosmética.</div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>Soy muy independiente y exitosa. ¿Esto no es para mujeres "sumisas"?</summary>
+        <div class="a">Justo al revés. Magnética está diseñada específicamente para mujeres exitosas que han pagado un precio en el amor por usar las mismas armas que las hicieron exitosas profesionalmente. No vas a "dejar de ser fuerte" — vas a aprender a accesar otra parte de tu fuerza que no estás usando.</div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>¿Necesito estar saliendo con alguien para que sirva?</summary>
+        <div class="a">No. De hecho, muchas alumnas hacen el curso entre relaciones. Los primeros 6 módulos son trabajo interno; los últimos 6 se aplican cuando empiezas a salir o si ya estás saliendo con alguien.</div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>¿Cuánto tiempo a la semana voy a necesitar?</summary>
+        <div class="a">1 hora para el video + 30 minutos para la práctica + 15 minutos para el audio opcional. Total: 1.5–2 horas/semana. Diseñado para una mujer ocupada con una vida real, no para alguien desempleada.</div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>¿Esto reemplaza a un terapeuta?</summary>
+        <div class="a">No. Magnética es un programa de transformación práctica. Si estás en terapia, este curso complementa hermosamente. Si descubres que necesitas apoyo más profundo, podemos sugerirte terapeutas aliadas.</div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>¿Qué pasa si no termino?</summary>
+        <div class="a">Tienes acceso de por vida. Puedes regresar cuando quieras. Pero por experiencia, las alumnas que sí completan el ritmo semanal son las que transforman. Te ayudamos a sostener el ritmo con la comunidad y los recordatorios.</div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>¿Es lo mismo que el matchmaking de Tovlov?</summary>
+        <div class="a">No. Magnética es el trabajo previo. El matchmaking de Tovlov (Essence, Alignment, Signature) es para mujeres listas para conocer hombres seleccionados. Muchas alumnas hacen Magnética primero y después aplican al proceso premium.</div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>¿Quién enseña el curso?</summary>
+        <div class="a">El curso es propiedad intelectual de Tovlov, presentado por Malka con apoyo del equipo de coaches Tovlov y terapeutas aliadas. Las sesiones live son con coaches certificadas en el método.</div>
+      </details>
+
+      <details class="faq-item reveal">
+        <summary>¿Hay devolución si no me funciona?</summary>
+        <div class="a">Sí, tres garantías stackeadas: devolución de 14 días sin preguntas, garantía de transformación de 60 días, y garantía Tovlov de 12 meses. El riesgo lo asumimos nosotros, no tú.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FINAL CTA ============== -->
+<section class="final-cta" id="checkout">
+  <div class="container final-cta-inner reveal">
+    <div class="eyebrow" style="justify-content: center; display: flex;">Cohort Junio 2026</div>
+    <h2>
+      La pregunta no es "¿funcionará?".<br>
+      Es "¿qué pasa si en 90 días sigues <span class="accent">exactamente donde estás hoy</span>?".
+    </h2>
+    <p>Las mujeres que un hombre realmente persigue no usan técnicas. Operan desde una frecuencia distinta — y esa frecuencia se aprende. Te esperamos del otro lado.</p>
+
+    <div class="cohort-meter">
+      <div class="meter-bar">
+        <div class="meter-fill"></div>
+      </div>
+      <div class="meter-label"><strong>73</strong> / 100 lugares</div>
+    </div>
+
+    <a href="#" class="btn btn-primary" style="font-size: 17px; padding: 22px 44px;">Quiero entrar — $1,997 MXN</a>
+    <div style="margin-top: 14px; font-size: 13px; color: rgba(246, 239, 230, 0.55);">3 garantías · acceso de por vida · cohort cierra al llegar a 100</div>
+
+    <div class="ps">
+      <strong>PD — de Malka</strong>
+      <p>Si llegaste hasta aquí leyendo, ya sabes lo que necesitas saber. Llevas mucho tiempo siendo la mujer que espera a que él se decida. Hoy puedes empezar a ser la mujer que es elegida. Y que también elige.</p>
+      <div class="signature">Te veo del otro lado.<br>— Malka</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer>
+  <div class="container">
+    <div class="brand-foot">Magnética<span class="sep">·</span>por Tovlov</div>
+    <p>De perseguir a ser elegida.</p>
+    <p style="margin-top: 18px;">© 2026 Tovlov · <a href="#">Privacidad</a> · <a href="#">Términos</a> · <a href="#">Contacto</a></p>
+  </div>
+</footer>
+
+<!-- ============== STICKY MOBILE CTA ============== -->
+<div class="sticky-cta" id="stickyCta">
+  <div class="sticky-cta-inner">
+    <div class="sticky-price">
+      <span>Magnética · 90 días</span>
+      <strong>$1,997 MXN</strong>
+    </div>
+    <a href="#checkout" class="btn btn-primary">Quiero entrar</a>
+  </div>
+</div>
+
+<script>
+  // Scroll reveal
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Sticky CTA after hero
+  const sticky = document.getElementById('stickyCta');
+  const hero = document.querySelector('.hero');
+  window.addEventListener('scroll', () => {
+    const heroBottom = hero.getBoundingClientRect().bottom;
+    if (heroBottom < 0) {
+      sticky.classList.add('show');
+    } else {
+      sticky.classList.remove('show');
+    }
+  }, { passive: true });
+
+  // VSL click - placeholder for now (sustituir con embed real)
+  document.getElementById('vsl').addEventListener('click', () => {
+    alert('Aquí se carga el VSL real cuando esté listo.\n\nReemplaza el div .vsl-placeholder por tu <video> o iframe (YouTube/Vimeo/Wistia) en el HTML.');
+  });
+
+  // Smooth scroll para anchors
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const href = a.getAttribute('href');
+      if (href === '#') return;
+      const target = document.querySelector(href);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
